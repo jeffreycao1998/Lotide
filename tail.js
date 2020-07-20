@@ -6,10 +6,14 @@ const assertEqual = (actual, expected) => {
   }
 };
 
-const head = (array) => {
-  return array[0];
-}
+const words = ["Yes", "No", "Maybe"];
 
-assertEqual(head([1]), 1);
-assertEqual(head(['Yellow', 'Red']),'Yellow');
-assertEqual(head([]), undefined);
+const tail = (array) => {
+  return array.slice(1);
+};
+
+tail(words);
+
+assertEqual(words.length, 3);
+assertEqual(tail(["yellow"]).length, 0);
+assertEqual(tail([]).length, 0);
